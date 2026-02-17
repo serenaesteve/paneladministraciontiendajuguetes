@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --principal: #ff6f61;
+  --secundario: #4dabf7;
+  --fondo: #f8f9fa;
+  --oscuro: #333;
+  --claro: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fondo);
+  color: var(--oscuro);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== HEADER NORMAL (NO HERO) ===== */
+header:not(.hero) {
+  background-color: var(--principal);
+  color: var(--claro);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* ===== CARRITO ===== */
+.cart-link {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: white;
+  line-height: 1;
+  z-index: 10;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  background: #ff3b30;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 3px 7px;
+  min-width: 18px;
+  text-align: center;
+  z-index: 11;
+}
+
+/* ===== HERO / BANNER ===== */
+header.hero {
+  padding: 0;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  height: 825px;
+}
+
+header.hero .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+header.hero .hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 18px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+header.hero .hero-box {
+  text-align: center;
+  color: white;
+}
+
+header.hero .hero-box h1 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,.4);
+}
+
+header.hero .hero-botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== SECCIONES ===== */
+section {
+  padding: 30px 20px;
+}
+
+section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== CONTENEDORES ===== */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== TARJETAS ===== */
+article {
+  background-color: var(--claro);
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+}
+
+article p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.destacado {
+  width: 220px;
+}
+
+.calificacion {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #f4b400;
+}
+
+.precio {
+  margin-top: 6px;
+  font-weight: bold;
+}
+
+.fecha {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===== LINKS ===== */
+.cardlink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  background: var(--principal);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.secundario {
+  background: var(--secundario);
+}
+
+/* ===== BUSCADOR ===== */
+.buscador {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+}
+
+.buscador input {
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  min-width: 260px;
+  outline: none;
+}
+/* ===== FICHA PRODUCTO ===== */
+.producto {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.producto-card {
+  background: white;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+.producto-img {
+  max-width: 360px;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.producto-info {
+  max-width: 460px;
+  text-align: left;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  background: gold;
+  color: #333;
+  vertical-align: middle;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--oscuro);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  article { width: 120px; }
+  .destacado { width: 180px; }
+
+  header.hero {
+    height: 180px;
+  }
+
+  header.hero .hero-box h1 {
+    font-size: 1.2rem;
+  }
+}
+html { scroll-behavior: smooth; }
+
